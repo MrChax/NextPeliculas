@@ -26,7 +26,8 @@ export default function RootLayout({ children }) {
     }
 
     const siguientePagina = () => {
-        if(page === Math.ceil(totalUsers / pageSize))
+        console.log(page, Math.ceil(totalUsers / pageSize));
+        if(page < Math.ceil(totalUsers / pageSize))
         {
             setPage(page + 1);
             if(page % 10 === 0){

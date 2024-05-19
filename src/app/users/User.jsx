@@ -21,7 +21,6 @@ export default function User(props) {
         <Link href={`/users/${props.Id}`}>
           <div>
             {
-              
               props.Picture ? <img className="imgStandar" src={props.Picture} alt={props.Title} onError={(event) => {
                 event.target.src = 'https://hips.hearstapps.com/hmg-prod/images/hlh110122fearedefiningability-016-1666713776.png?crop=1.00xw:0.743xh;0,0.0935xh&resize=640:*';
               }} /> : <img className="imgStandar" src="https://hips.hearstapps.com/hmg-prod/images/hlh110122fearedefiningability-016-1666713776.png?crop=1.00xw:0.743xh;0,0.0935xh&resize=640:*" alt={props.Title} />
