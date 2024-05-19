@@ -18,7 +18,7 @@ export default function User(props) {
   return (
     <li className="user-item">
       <div className="card user-item__content">
-        <Link href={`/users/${props.Id}`}>
+        <Link href={`/users/${props.Id}`} usuario={props}>
           <div>
             {
               

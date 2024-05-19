@@ -78,7 +78,7 @@ export default function RootLayout({ children }) {
             <Loading/>
         ) : (
             <>
-                <UsersPage Users={users} />
+                <section style={{background: 'linear-gradient(to bottom, #0a0a0a, #292929)'}} Users={users}>{children}</section>
                 <Paginado paginaActiva={page}  siguientePagina = {siguientePagina} anteriorPagina = {anteriorPagina} totalUsers={totalUsers} registroFinal={registroFinal} registroInicial={registroInicial} paginasMostrables={paginas} setPage={setPageNav}/>
             </>
         )}
