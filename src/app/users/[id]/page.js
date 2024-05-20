@@ -1,9 +1,10 @@
 "use client";
 import { useState, useEffect } from "react";
+import Loading2 from "../Loading2";
 
 export default function PageDetails({ params }) {
   const { id } = params;
-  const [user, setUser] = useState([]);
+  const [user, setUser] = useState(null);
 
   useEffect(() => {
     fetch(
@@ -18,8 +19,21 @@ export default function PageDetails({ params }) {
 
   return (
     <>
-      <h3>{user["title"]}</h3>
-      <h3>{user["fullplot"]}</h3>
+        {
+          user === null
+          ?
+            (
+              <Loading2/>
+            )
+          :
+            (
+            <>
+             <img src={user["poster"]} alt={user["title"]} />
+              <h3>{user["title"]}</h3>
+              <h3>{user["fullplot"]}</h3>
+            </>
+            )
+        }
     </>
   );
 }
