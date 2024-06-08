@@ -8,7 +8,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="h-full bg-white">
-      <body>{children}</body>
+      <body style={{background: 'linear-gradient(to bottom, #0a0a0a, #292929)'}}>{children}</body>
     </html>
   );
 }
